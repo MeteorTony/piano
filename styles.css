@@ -11,9 +11,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.piano {
+#notes{
   display: flex;
 }
 
@@ -39,10 +40,35 @@ body {
   margin-left: calc(var(--width) / -2);
   /* right half of black keys inside right white key */
   margin-right: calc(var(--width) / -2);
-  margin-top: calc(var(--width) * -2.7);
+  margin-top: calc(var(--width) / -100);
   z-index: 2;
 }
 
 .black.active {
   background-color: #333;
+}
+
+#pedal{
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 17px 30px;
+  margin: 10px;
+  border: 0;
+  color: white;
+  font-size: 17.5px;
+  border: 2px solid transparent;
+  border-color: black;
+  color: black;
+  background: transparent;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background-color .1s ease-in-out;
+  
+}
+
+#pedal:hover{
+  background-color: black;
+  color: white;
 }

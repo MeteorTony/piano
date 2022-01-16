@@ -4,16 +4,17 @@ const BLACK_KEYS = ["s", "d", "g", "h", "j", "l", ";"];
 const keys = document.querySelectorAll(".key");
 const whiteKeys = document.querySelectorAll(".key.white");
 const blackKeys = document.querySelectorAll(".key.black");
+const pedal = document.getElementById("pedal");
 
-var interval = 1000; // larger interval -> longer extension of note(with pedal)
+var interval = 10;      // larger interval -> longer extension of note(with pedal)
+var isPedalOn = false;
 
 keys.forEach((key) => {
   key.addEventListener("click", () => playNote(key));
 });
 
 document.addEventListener("keydown", (e) => {
-  if (e.repeat) return;
-  //return; // if pressing a key -> won't keep repeating
+  if (e.repeat) return; // if pressing a key -> won't keep repeating
   const key = e.key;
   const whiteKeyIndex = WHITE_KEYS.indexOf(key);
   const blackKeyIndex = BLACK_KEYS.indexOf(key);
@@ -49,3 +50,10 @@ function playNote(key) {
     key.classList.remove("active");
   });
 }
+
+pedal.innerHTML += `: ${isPedalOn}`;
+
+pedal.addEventListener("click", () =>{
+    pedal.innerHTML = `pedal: ${isPedalOn = !isPedalOn}`;
+    interval = isPedalOn ? 500 : 20;
+});
