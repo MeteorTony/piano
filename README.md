@@ -44,4 +44,6 @@ npm run devStart
 
 ## Remarks
 
-The recorded song currently cannot be downloaded.
+1. The recorded song currently cannot be downloaded.
+
+2. Note that only static pages are supported by GitHub pages, so the recorder feature is not available online, please try it locally.
