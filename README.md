@@ -1,6 +1,8 @@
 # Piano
 
-A piano keyboard with recorder available.
+A piano keyboard with recorder available (please check remarks at the bottom). 
+
+[Have a try here!](https://meteortony.github.io/piano/)
 
 <img src="https://user-images.githubusercontent.com/61377153/149753717-12fd2c2c-d933-486c-a65f-af092eab29f6.png" alt="Preview" style="width:750px"/>
 
@@ -46,4 +48,4 @@ npm run devStart
 
 1. The recorded song currently cannot be downloaded.
 
-2. Note that only static pages are supported by GitHub pages, so the recorder feature is not available online, please try it locally.
+2. Note that only static pages are supported by GitHub pages, so the <b> recorder feature is not available online </b>, please try it locally.
